@@ -4,11 +4,10 @@ syntax on
 filetype plugin indent on
 set laststatus=2
 
-" 2 space tabs
 set smartindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 set list
-set fileencoding=utf8
+set encoding=utf8
