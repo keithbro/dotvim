@@ -9,6 +9,7 @@ set laststatus=2
 
 set smartindent
 set tabstop=4
+set softtabstop=4 " Backspace tabs
 set shiftwidth=4
 set expandtab
 
