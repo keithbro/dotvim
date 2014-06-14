@@ -22,9 +22,14 @@ set showmatch
 set incsearch
 set hlsearch
 
+set fileencodings=utf-8,latin1,sjis,default
 set encoding=utf8
 
 match ErrorMsg '\s\+$'
 
 set list
-set listchars=tab:+\ 
+set listchars=tab:+\
+
+if has("statusline")
+    set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+endif
