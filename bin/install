@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo $1
+
+if [[ ! -z "$1" && -d home ]]; then
+    cp -rf home/* ~$1
+
+    cd ~$1
+
+    mkdir -p .vim/autoload .vim/bundle && curl -LSso .vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+    git clone https://github.com/Lokaltog/vim-easymotion .vim/bundle/vim-easymotion
+else
+  echo "User not specified"
+fi
