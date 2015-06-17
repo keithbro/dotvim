@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo $1
+ls -la
 
 if [[ ! -z "$1" && -d home ]]; then
     cp -rf home/* ~$1
