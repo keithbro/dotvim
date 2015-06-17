@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+let mapleader = " "
+
 syntax enable
 
 set t_Co=256
@@ -13,7 +15,7 @@ set tabstop=4
 set softtabstop=4 " Backspace tabs
 set shiftwidth=4
 set expandtab
-set backspace=indent,eol,start
+"set backspace=indent,eol,start
 
 autocmd Filetype perl setlocal ts=4 sts=4 sw=4
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
@@ -29,10 +31,22 @@ set hlsearch
 set fileencodings=utf-8,latin1,sjis,default
 set encoding=utf8
 
-match ErrorMsg '\s\+$'
+"match ErrorMsg '\s\+$'
 
-set list
-set listchars=tab:+\
+set list listchars=tab:»·,trail:·,nbsp:·
+
+set textwidth=80
+set colorcolumn=+1
+
+set number
+set numberwidth=5
+
+set wildmenu
+
+"nnoremap <Left> :echoe "Use h"<CR>
+"nnoremap <Right> :echoe "Use l"<CR>
+"nnoremap <Up> :echoe "Use k"<CR>
+"nnoremap <Down> :echoe "Use j"<CR>
 
 if has("statusline")
     set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
