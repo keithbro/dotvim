@@ -1,4 +1,5 @@
-" Turn on that syntax highlighting
+execute pathogen#infect()
+
 syntax enable
 
 set t_Co=256
@@ -13,6 +14,9 @@ set softtabstop=4 " Backspace tabs
 set shiftwidth=4
 set expandtab
 set backspace=indent,eol,start
+
+autocmd Filetype perl setlocal ts=4 sts=4 sw=4
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " UI Config
 set cursorline
