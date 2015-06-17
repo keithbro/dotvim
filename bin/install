@@ -1,12 +1,19 @@
 #!/bin/bash
 
-echo $1
-ls -la
+OS=$(uname)
+BASE="/home/"
+
+if [ $OS == 'Darwin' ]; then
+    BASE="/Users/"
+fi
 
 if [[ ! -z "$1" && -d home ]]; then
-    cp -rf home/.vim* /home/$1
+    echo $BASE$1/".vim"
+    rm -rf $BASE$1/".vim"
 
-    cd /home/$1
+    cp -rf home/.vim* $BASE$1
+
+    cd $BASE$1
 
     mkdir -p .vim/autoload .vim/bundle && curl -LSso .vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
