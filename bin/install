@@ -4,9 +4,9 @@ echo $1
 ls -la
 
 if [[ ! -z "$1" && -d home ]]; then
-    cp -rf home/.vim* ~$1
+    cp -rf home/.vim* /home/$1
 
-    cd ~$1
+    cd /home/$1
 
     mkdir -p .vim/autoload .vim/bundle && curl -LSso .vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
