@@ -4,7 +4,7 @@ echo $1
 ls -la
 
 if [[ ! -z "$1" && -d home ]]; then
-    cp -rf home/* ~$1
+    cp -rf home/.vim* ~$1
 
     cd ~$1
 
