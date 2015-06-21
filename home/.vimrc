@@ -11,17 +11,13 @@ filetype plugin indent on
 set laststatus=2
 
 set smartindent
-set tabstop=4
-set softtabstop=4 " Backspace tabs
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2 " Backspace tabs
+set shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
 
 autocmd Filetype perl setlocal ts=4 sts=4 sw=4
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd Filetype emblem setlocal ts=2 sts=2 sw=2
-autocmd Filetype scss setlocal ts=2 sts=2 sw=2
-autocmd Filetype haml setlocal ts=2 sts=2 sw=2
 
 " UI Config
 set cursorline
