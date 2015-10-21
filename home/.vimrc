@@ -18,6 +18,7 @@ set expandtab
 set backspace=indent,eol,start
 
 autocmd Filetype perl setlocal ts=4 sts=4 sw=4
+autocmd Filetype html setlocal ts=4 sts=4 sw=4
 
 " UI Config
 set cursorline
