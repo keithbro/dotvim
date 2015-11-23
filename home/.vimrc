@@ -43,6 +43,8 @@ set numberwidth=5
 
 set wildmenu
 
+set mouse=a
+
 command E Explore
 
 "nnoremap <Left> :echoe "Use h"<CR>
