@@ -1,6 +1,7 @@
 execute pathogen#infect()
 
 let mapleader = " "
+let g:netrw_liststyle=3
 
 syntax enable
 
@@ -41,6 +42,8 @@ set number
 set numberwidth=5
 
 set wildmenu
+
+command E Explore
 
 "nnoremap <Left> :echoe "Use h"<CR>
 "nnoremap <Right> :echoe "Use l"<CR>
