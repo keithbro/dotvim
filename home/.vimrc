@@ -49,6 +49,8 @@ set path+=lib
 
 command E Explore
 
+au BufReadPost *.pp set syntax=ruby
+
 "nnoremap <Left> :echoe "Use h"<CR>
 "nnoremap <Right> :echoe "Use l"<CR>
 "nnoremap <Up> :echoe "Use k"<CR>
