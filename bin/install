@@ -1,25 +1,14 @@
 #!/bin/bash
 
-OS=$(uname)
-BASE="/home/"
+echo "$HOME/.vim"
+rm -rf "$HOME/.vim"
 
-if [ $OS == 'Darwin' ]; then
-    BASE="/Users/"
-fi
+cp -rf home/.vim* $HOME
 
-if [[ ! -z "$1" && -d home ]]; then
-    echo $BASE$1/".vim"
-    rm -rf $BASE$1/".vim"
+cd $HOME
 
-    cp -rf home/.vim* $BASE$1
+mkdir -p .vim/autoload .vim/bundle && curl -LSso .vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-    cd $BASE$1
-
-    mkdir -p .vim/autoload .vim/bundle && curl -LSso .vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-    git clone https://github.com/ctrlpvim/ctrlp.vim.git .vim/bundle/ctrlp.vim
-    git clone https://github.com/bling/vim-airline .vim/bundle/vim-airline
-    git clone https://github.com/mileszs/ack.vim.git .vim/bundle/ack.vim
-else
-  echo "User not specified"
-fi
+git clone https://github.com/ctrlpvim/ctrlp.vim.git .vim/bundle/ctrlp.vim
+git clone https://github.com/bling/vim-airline .vim/bundle/vim-airline
+git clone https://github.com/mileszs/ack.vim.git .vim/bundle/ack.vim
