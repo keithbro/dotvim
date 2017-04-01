@@ -1,6 +1,8 @@
 #!/bin/bash
 
-rm -rf "$HOME/.vim"
+if [ "$1" == "--force" ]; then
+  rm -rf "$HOME/.vim"
+fi
 
 cp -rf home/.vim* $HOME
 
@@ -16,5 +18,7 @@ git clone https://github.com/ctrlpvim/ctrlp.vim
 git clone https://github.com/bling/vim-airline
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/easymotion/vim-easymotion
+git clone https://github.com/elixir-lang/vim-elixir
+git clone https://github.com/pangloss/vim-javascript
 
 cd $PWD
