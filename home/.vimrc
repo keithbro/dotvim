@@ -44,8 +44,6 @@ set numberwidth=5
 
 set wildmenu
 
-set mouse=a
-
 set path+=lib
 
 command E Explore
