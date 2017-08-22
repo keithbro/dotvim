@@ -18,6 +18,7 @@ set shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
 set relativenumber
+set nocompatible
 
 autocmd Filetype perl setlocal ts=4 sts=4 sw=4
 autocmd Filetype html setlocal ts=4 sts=4 sw=4
