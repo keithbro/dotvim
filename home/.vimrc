@@ -11,7 +11,6 @@ colorscheme xoria256
 filetype plugin indent on
 set laststatus=2
 
-set smartindent
 set tabstop=2
 set softtabstop=2 " Backspace tabs
 set shiftwidth=2
@@ -19,12 +18,13 @@ set expandtab
 set backspace=indent,eol,start
 set relativenumber
 set nocompatible
+set ignorecase
 
-autocmd Filetype perl setlocal ts=4 sts=4 sw=4
-autocmd Filetype html setlocal ts=4 sts=4 sw=4
+autocmd Filetype perl,html setlocal ts=4 sts=4 sw=4
 
 " UI Config
 set cursorline
+set cursorcolumn
 set showmatch
 
 " Searching
@@ -44,6 +44,7 @@ set number
 set numberwidth=5
 
 set wildmenu
+let g:ctrlp_custom_ignore = 'node_modules'
 
 set path+=lib
 
