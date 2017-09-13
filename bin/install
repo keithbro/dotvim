@@ -14,6 +14,8 @@ PWD=`pwd`
 
 cd .vim/bundle
 
+git config --global init.templatedir '~/.git-templates'
+
 git clone https://github.com/ctrlpvim/ctrlp.vim
 git clone https://github.com/bling/vim-airline
 git clone https://github.com/tpope/vim-fugitive

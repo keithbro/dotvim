@@ -1,0 +1,7 @@
+NAME=$(git branch | grep '* ' | grep -m 1 -o '[A-Z]\+-\d\+')
+TEXT=$(cat "$1" | sed '/^#.*/d')
+
+if [ -n "$NAME" ] && [ -n "$TEXT" ]
+then
+    echo $(cat "$1" | sed '/^#.*/d')' ['"$NAME"']' > "$1"
+fi
