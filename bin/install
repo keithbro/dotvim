@@ -4,7 +4,7 @@ if [ "$1" == "--force" ]; then
   rm -rf "$HOME/.vim"
 fi
 
-cp -rf home/.vim* $HOME
+cp -rf home/. $HOME
 
 cd $HOME
 
