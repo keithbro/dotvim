@@ -4,7 +4,7 @@ if [ "$1" == "--force" ]; then
   rm -rf "$HOME/.vim"
 fi
 
-cp -rf home/.vim* $HOME
+cp -rf home/. $HOME
 
 cd $HOME
 
@@ -14,12 +14,18 @@ PWD=`pwd`
 
 cd .vim/bundle
 
+git config --global init.templatedir '~/.git-templates'
+
 git clone https://github.com/ctrlpvim/ctrlp.vim
 git clone https://github.com/bling/vim-airline
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/easymotion/vim-easymotion
+
 git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/vim-perl/vim-perl
+git clone https://github.com/vim-ruby/vim-ruby
+git clone https://github.com/janko-m/vim-test
+
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/tpope/vim-commentary.git
 
