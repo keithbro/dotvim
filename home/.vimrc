@@ -21,6 +21,7 @@ set relativenumber
 
 autocmd Filetype perl setlocal ts=4 sts=4 sw=4
 autocmd Filetype html setlocal ts=4 sts=4 sw=4
+autocmd Filetype go setlocal nolist noexpandtab
 
 " UI Config
 set cursorline
