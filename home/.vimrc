@@ -1,11 +1,13 @@
 set nocompatible
+
 filetype off
+
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 
 call vundle#begin()
 
 Plugin 'bling/vim-airline'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'janko-m/vim-test'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
@@ -24,7 +26,6 @@ let g:netrw_liststyle=3
 
 syntax enable
 
-set t_Co=256
 colorscheme xoria256
 
 set laststatus=2
@@ -94,6 +95,8 @@ nmap <silent> t<C-g> :TestVisit<CR>
 nnoremap <leader>] :ALEGoToDefinition<cr>
 nnoremap <leader>f :ALEFix<cr>
 
+nnoremap <C-p> :FZF<cr>
+
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 
@@ -101,6 +104,3 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:ale_fixers = { 'ruby': ['rubocop'] }
-
-let g:ctrlp_custom_ignore = 'node_modules\|tmp'
-let g:ctrlp_map = '<c-p>'
