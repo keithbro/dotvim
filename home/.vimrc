@@ -8,7 +8,7 @@ set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 Plugin 'bling/vim-airline'
-Plugin 'janko-m/vim-test'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
@@ -86,11 +86,10 @@ nmap <leader>l :bnext<CR>
 " Move to the previous buffer
 nmap <leader>h :bprevious<CR>
 
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 nnoremap <leader>] :ALEGoToDefinition<cr>
 nnoremap <leader>f :ALEFix<cr>
@@ -104,3 +103,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:ale_fixers = { 'ruby': ['rubocop'] }
+
+let g:rspec_command = "!bundle exec rspec {spec}"
+let g:rspec_runner = "os_x_iterm2"
