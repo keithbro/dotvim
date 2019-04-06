@@ -12,6 +12,8 @@ mkdir -p .vim/autoload .vim/bundle && curl -LSso .vim/autoload/pathogen.vim http
 
 PWD=`pwd`
 
+brew install fzf
+
 cd .vim/bundle
 
 git config --global init.templatedir '~/.git-templates'
@@ -19,3 +21,5 @@ git config --global init.templatedir '~/.git-templates'
 git clone https://github.com/VundleVim/Vundle.vim
 
 cd $PWD
+
+vim +PluginInstall +qall
