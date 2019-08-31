@@ -16,7 +16,8 @@ brew install fzf
 
 cd .vim/bundle
 
-git config --global init.templatedir '~/.git-templates'
+git config --global core.excludesfile ~/.gitignore_global
+git config --global init.templatedir ~/.git-templates
 
 git clone https://github.com/VundleVim/Vundle.vim
 

@@ -8,7 +8,6 @@ set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 Plugin 'bling/vim-airline'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
@@ -88,7 +87,6 @@ nmap <leader>h :bprevious<CR>
 
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 nnoremap <leader>] :ALEGoToDefinition<cr>
