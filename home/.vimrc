@@ -8,11 +8,10 @@ set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 Plugin 'bling/vim-airline'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0rp/ale'
 
